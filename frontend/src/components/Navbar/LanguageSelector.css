@@ -1,0 +1,21 @@
+.lang-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-flag {
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 4px;
+}
+
+.lang-flag:hover {
+  transform: scale(1.1);
+}
+
+.active {
+  box-shadow: 0 0 5px #000;
+}

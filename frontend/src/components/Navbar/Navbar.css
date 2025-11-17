@@ -1,0 +1,55 @@
+/* NAVBAR WRAPPER */
+.navbar {
+  width: 100%;
+  height: 85px;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+
+  /* Navbar FLOATS over the wallpaper */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* LEFT (LOGO) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 80px; 
+  height: auto;
+}
+
+/* RIGHT SIDE (MENU + FLAG) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* MENU LINKS */
+.navbar-right a {
+  text-decoration: none;
+  color: white;       /* FIXED — real transparent navbar text */
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.navbar-right a:hover {
+  text-decoration: underline;
+}
+
+/* FLAG */
+.lang-button,
+.flag-icon {
+  width: 30px;
+  cursor: pointer;
+}

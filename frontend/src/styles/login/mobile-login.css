@@ -1,0 +1,21 @@
+.mobile-login-wrapper {
+  padding: 20px;
+}
+
+.mobile-title {
+  text-align: center;
+}
+
+.input-group {
+  margin: 15px 0;
+}
+
+.btn-mobile-login {
+  width: 100%;
+  padding: 12px;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin-top: 15px;
+}

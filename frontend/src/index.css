@@ -1,3 +1,5 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 body, html, #root {
   height: 100%;
   width: 100%;

@@ -1,52 +1,55 @@
-
-
+/* FULL PAGE RESET */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* WRAPPER WITH BACKGROUND */
 .login-wrapper {
   width: 100%;
   min-height: 100vh;
   position: relative;
 
-  
   background-image: url("https://storage.123fakturera.se/public/wallpapers/sverige43.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  display: flex;                  /* 🔵 UPDATED — center container better */
+  justify-content: center;        /* 🔵 */
+  align-items: flex-start;        /* 🔵 */
+  padding-top: 150px;             /* 🔵 replaces top:150px from box */
 }
 
-
+/* WALLPAPER IMG REMOVED */
 .login-bg {
   display: none;
 }
 
-
+/* LOGIN BOX */
 .login-box {
-  width: 480px;
-  background: white;
+  width: 460px;
+  background: rgba(255, 255, 255, 0.95); /* 🔵 UPDATED — slight transparency */
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 
-  position: relative;
-  top: 150px;               
-  margin: 0 auto;          
+  /* Remove manual top offset */
+  position: relative;               /* 🔵 */
 }
 
-
+/* LOGIN TITLE */
 .login-title {
-  color: red;             
+  color: red;
   font-size: 32px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 25px;
 }
 
-
-
+/* INPUT GROUPS */
 .input-group {
   margin-bottom: 18px;
 }
@@ -65,7 +68,7 @@ body, html {
   font-size: 15px;
 }
 
-
+/* LOGIN BUTTON */
 .btn-login {
   width: 100%;
   padding: 12px;
@@ -78,7 +81,11 @@ body, html {
   margin-top: 10px;
 }
 
+.btn-login:hover {                 /* 🟢 OPTIONAL */
+  background: #005fa3;
+}
 
+/* LINKS (REGISTER + FORGOT) */
 .login-links {
   margin-top: 15px;
   display: flex;

@@ -1,0 +1,74 @@
+/* BACKGROUND WALLPAPER */
+.contact-bg {
+  background-image: url("https://storage.123fakturera.se/public/wallpapers/sverige43.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+/* CENTER WHITE CARD */
+.contact-card {
+  width: 50%;
+  max-width: 650px;
+  background: white;
+  margin: 160px auto 60px;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.contact-email-btn {
+  display: inline-block;
+  background: #1abc9c;
+  padding: 14px 30px;
+  color: white;
+  border-radius: 30px;
+  font-size: 18px;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.contact-email-btn:hover {
+  background: #17a589;
+}
+
+/* SOCIAL ICONS */
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  gap: 25px;
+}
+
+.icon {
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 0 10px black;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}

@@ -1,9 +1,9 @@
-echo "# minisow-frontend" >> README.md
+
 # minisow-frontend
 
 Frontend UI for the mini SOW project, inspired by the 123fakturera interface.
 
-##  Completed (Day 1)
+## git Completed (Day 1)
 - Project setup (Vite + React)
 - File structure created
 - Desktop Login UI

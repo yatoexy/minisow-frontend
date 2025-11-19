@@ -1,0 +1,75 @@
+/* FULL PAGE WRAPPER */
+.register-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("https://storage.123fakturera.se/public/wallpapers/sverige43.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+/* WHITE BOX */
+.register-box {
+  width: 480px;
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* TITLE */
+.register-title {
+  text-align: center;
+  font-size: 28px;
+  color: red;
+  margin-bottom: 20px;
+}
+
+/* INPUT FIELDS */
+.register-box input,
+.register-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* READONLY INFO TEXT */
+.register-info-text {
+  height: 140px;
+  border-radius: 12px;
+  resize: none;
+  padding: 12px;
+}
+
+/* BUTTON */
+.btn-register {
+  width: 100%;
+  padding: 14px;
+  background: #009933;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-register:hover {
+  background: #007a29;
+}
+.input-error {
+  border: 2px solid red !important;
+}
+
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+

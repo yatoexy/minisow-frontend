@@ -3,23 +3,12 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import LanguageSelector from "./LanguageSelector";
 import { LanguageContext } from "../../utils/LanguageContext";
-import { loadGoogleTranslate } from "../../utils/useGoogleTranslate";
 
 export default function Navbar() {
+  const hideOnLogin = window.location.pathname === "/login";
+  if (hideOnLogin) return null;
+
   const { translations } = useContext(LanguageContext);
-
-  const openGoogleTranslate = () => {
-    loadGoogleTranslate();
-
-    setTimeout(() => {
-      const frame = document.querySelector(".goog-te-menu-frame");
-      if (frame) {
-        try {
-          frame.contentWindow.document.body.click();
-        } catch (e) {}
-      }
-    }, 1200);
-  };
 
   return (
     <nav className="navbar">
@@ -36,23 +25,20 @@ export default function Navbar() {
 
         {/* RIGHT MENU */}
         <div className="navbar-right">
-          <Link to="/home">Home</Link>
-          <Link to="/order">Order</Link>
-          <Link to="/customers">Our Customers</Link>
-          <Link to="/about">About us</Link>
-          <Link to="/contact">Contact Us</Link>
-          <Link to="/programs">Other Programs</Link>
-          <Link to="/more">More</Link>
+          <Link to="/home">{translations.home}</Link>
+          <Link to="/order">{translations.order}</Link>
+          <Link to="/customers">{translations.customers}</Link>
+          <Link to="/about">{translations.about}</Link>
+          <Link to="/contact">{translations.contact}</Link>
+          <Link to="/programs">{translations.programs}</Link>
+          <Link to="/more">{translations.more}</Link>
 
-          {/* FLAG CLICK triggers Google Translate */}
-          <div onClick={openGoogleTranslate} className="lang-dropdown">
+          {/* FLAG LANGUAGE SWITCH */}
+          <div className="lang-dropdown">
             <LanguageSelector />
           </div>
         </div>
       </div>
-
-      {/* Google Translate element */}
-      <div id="google_translate_element" style={{ display: "none" }}></div>
     </nav>
   );
 }

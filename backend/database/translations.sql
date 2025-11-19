@@ -1,18 +1,36 @@
-CREATE TABLE IF NOT EXISTS translations (
-  id SERIAL PRIMARY KEY,
-  key TEXT NOT NULL,
-  en TEXT NOT NULL,
-  sv TEXT NOT NULL
-);
+import express from "express";
+import pkg from "pg";
+const { Pool } = pkg;
 
-INSERT INTO translations (key, en, sv) VALUES
-('home', 'Home', 'Hem'),
-('order', 'Order', 'Beställ'),
-('customers', 'Our Customers', 'Våra kunder'),
-('about', 'About us', 'Om oss'),
-('contact', 'Contact Us', 'Kontakta oss'),
-('login', 'Log in', 'Logga in'),
-('email', 'Enter your email address', 'Ange din e-postadress'),
-('password', 'Enter your password', 'Ange ditt lösenord'),
-('register', 'Register', 'Registrera'),
-('forgot', 'Forgotten password?', 'Glömt lösenord?');
+const router = express.Router();
+
+const pool = new Pool({
+  user: "postgres",
+  host: "localhost",
+  database: "yourdbname",
+  password: "yourpassword",
+  port: 5432
+});
+
+// GET /api/translations?lang=en  OR  ?lang=sv
+router.get("/", async (req, res) => {
+  const lang = req.query.lang === "sv" ? "sv" : "en"; // default to en
+
+  try {
+    const result = await pool.query("SELECT key, en, sv FROM translations");
+
+    let translatedObj = {};
+
+    result.rows.forEach(row => {
+      translatedObj[row.key] = row[lang];  // pick en or sv column
+    });
+
+    res.json(translatedObj);
+
+  } catch (err) {
+    console.error("Translation DB error:", err);
+    res.status(500).json({ error: "Failed to load translations" });
+  }
+});
+
+export default router;

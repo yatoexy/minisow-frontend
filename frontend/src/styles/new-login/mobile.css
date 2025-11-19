@@ -1,0 +1,65 @@
+
+
+/* MOBILE PAGE */
+.mobile-login-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-image: url("https://storage.123fakturera.se/public/wallpapers/sverige43.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.mobile-login-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.mobile-login-title {
+  text-align: center;
+  color: red;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.mobile-input-group {
+  margin-bottom: 18px;
+}
+
+.mobile-input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #333;
+}
+
+.mobile-input-group input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.mobile-btn-login {
+  width: 100%;
+  padding: 14px;
+  background: #0077cc;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.mobile-login-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-login-links a {
+  color: #0066cc;
+  text-decoration: none;
+}

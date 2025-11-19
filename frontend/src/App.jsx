@@ -1,8 +1,20 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import ForgotEmail from "./pages/forgot/ForgotEmail";
+import ForgotPostal from "./pages/forgot/ForgotPostal";
+import ForgotSuccess from "./pages/forgot/ForgotSuccess";
+import ForgotError from "./pages/forgot/ForgotError";
 
-import LoginPage from "./pages/LoginPage";
+// LOGIN PAGE
+import LoginPage from "./pages/login/LoginPage";
+
+// REGISTER PAGE
+import Register from "./pages/Register";
+
+// PRICELIST PAGE (NEW)
+import PriceList from "./pages/PriceList";
+
 import Home from "./pages/Home";
 import Order from "./pages/Order";
 import OurCustomers from "./pages/OurCustomers";
@@ -18,34 +30,38 @@ export default function App() {
     <Router>
       <Routes>
 
-        {/* DEFAULT → LOGIN PAGE */}
+        {/* LOGIN (DEFAULT PAGE) */}
         <Route
           path="/"
           element={<LoginPage setLoggedIn={setLoggedIn} />}
         />
 
-        {/* HOME PAGE */}
+        {/* REGISTER PAGE */}
+        <Route path="/register" element={<Register />} />
+
+        {/* PRICELIST PAGE (AFTER LOGIN) */}
+        
+        <Route
+  path="/pricelist"
+  element={loggedIn ? <PriceList /> : <LoginPage setLoggedIn={setLoggedIn} />}
+/>
+
+<Route path="/forgot" element={<ForgotEmail />} />
+<Route path="/forgot-postal" element={<ForgotPostal />} />
+<Route path="/forgot-success" element={<ForgotSuccess />} />
+<Route path="/forgot-error" element={<ForgotError />} />
+
+        {/* OTHER STATIC PAGES */}
         <Route path="/home" element={<Home />} />
-
-        {/* ORDER PAGE */}
         <Route path="/order" element={<Order />} />
-
-        {/* OUR CUSTOMERS PAGE */}
         <Route path="/customers" element={<OurCustomers />} />
-
-        {/* ABOUT US PAGE */}
         <Route path="/about" element={<AboutUs />} />
-
-        {/* CONTACT US PAGE */}
         <Route path="/contact" element={<ContactUs />} />
-
-        {/* OTHER PROGRAMS PAGE */}
         <Route path="/programs" element={<OtherPrograms />} />
-
-        {/* MORE PAGE */}
         <Route path="/more" element={<More />} />
 
       </Routes>
+      
     </Router>
   );
 }

@@ -1,12 +1,15 @@
-/* src/styles/more.css */
+/* ================================
+        DESKTOP VERSION (UNCHANGED)
+================================ */
 
+/* OUTER WRAPPER */
 .more-wrapper {
   width: 100%;
   min-height: 100vh;
   position: relative;
 }
 
-/* SAME WALLPAPER AS HOME */
+/* WALLPAPER */
 .more-bg {
   background-image: url("https://storage.123fakturera.se/public/wallpapers/sverige43.jpg");
   background-size: cover;
@@ -64,4 +67,74 @@
 
 .more-btn:hover {
   background: #28b765;
+}
+
+
+
+/* ================================
+            MOBILE (≤ 768px)
+================================ */
+
+@media (max-width: 768px) {
+
+  .more-main {
+    padding-top: 130px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .more-card {
+    width: 100%;
+    padding: 25px;
+    border-radius: 18px;
+  }
+
+  .more-title {
+    font-size: 20px;
+  }
+
+  .more-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .more-btn {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+
+
+/* ================================
+        TABLET (769px–1024px)
+================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .more-main {
+    padding-top: 150px;
+    padding-bottom: 70px;
+  }
+
+  .more-card {
+    width: 75%;
+    padding: 32px;
+    border-radius: 22px;
+  }
+
+  .more-title {
+    font-size: 21px;
+  }
+
+  .more-buttons {
+    gap: 20px;
+  }
+
+  .more-btn {
+    padding: 13px 28px;
+    font-size: 17px;
+  }
 }

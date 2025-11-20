@@ -35,3 +35,30 @@
 .lang-option:hover {
   background: #f0f0f0;
 }
+@media (max-width: 768px) {
+  .lang-dropdown {
+    width: 100%;
+  }
+
+  .lang-options {
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 50px;
+  }
+
+  .lang-option {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .lang-current {
+    width: 32px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lang-options {
+    width: 160px;
+    top: 45px;
+  }
+}

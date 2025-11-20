@@ -1,3 +1,7 @@
+/* =======================
+      GLOBAL HEADER
+   ======================= */
+
 .top-header {
   width: 100%;
   height: 70px;
@@ -5,8 +9,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px;
+
+  padding: 0 20px;
   color: white;
+
+  position: fixed;       /* 🔥 stays on top always */
+  top: 0;
+  left: 0;
+  z-index: 1000;         /* 🔥 above sidebar/table */
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .header-left {
@@ -31,7 +43,73 @@
   opacity: 0.8;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .flag-icon {
   width: 28px;
-  margin-left: 10px;
+}
+
+
+
+/* =======================
+      MOBILE (0–768px)
+   ======================= */
+@media (max-width: 768px) {
+
+  .top-header {
+    height: 60px;
+    padding: 0 12px;
+  }
+
+  .profile-pic {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+  }
+
+  .user-info .user-name {
+    font-size: 15px;
+  }
+
+  .user-info .company-name {
+    font-size: 11px;
+  }
+
+  .flag-icon {
+    width: 22px;
+  }
+}
+
+
+
+/* =======================
+      TABLET (769–1024px)
+   ======================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .top-header {
+    height: 65px;
+    padding: 0 18px;
+  }
+
+  .profile-pic {
+    width: 42px;
+    height: 42px;
+  }
+
+  .user-info .user-name {
+    font-size: 16px;
+  }
+
+  .user-info .company-name {
+    font-size: 13px;
+  }
+
+  .flag-icon {
+    width: 25px;
+  }
 }

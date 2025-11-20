@@ -1,3 +1,7 @@
+/* ===========================
+      DESKTOP VERSION (UNCHANGED)
+=========================== */
+
 .aboutus-wrapper {
   width: 100%;
   margin-top: 90px;
@@ -108,7 +112,7 @@
 /* FINAL SECTION */
 .aboutus-final {
   padding: 60px 20px;
-  text-align: center;
+ text-align: center;
 }
 
 .aboutus-final h2 {
@@ -166,19 +170,168 @@
   transform: scale(1.15);
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
+/* ===========================
+        MOBILE VERSION
+=========================== */
+
+@media (max-width: 768px) {
+
+  .aboutus-wrapper {
+    margin-top: 100px;
+  }
+
+  /* HERO */
+  .aboutus-section {
+    padding: 60px 15px;
+  }
+
+  .aboutus-section h1 {
+    font-size: 32px;
+  }
+
+  .aboutus-sub {
+    font-size: 18px;
+  }
+
+  .aboutus-text {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .aboutus-img-large {
+    width: 95%;
+    margin-top: 20px;
+  }
+
+  /* ROWS */
   .aboutus-row {
-    flex-direction: column;
-    padding: 40px 20px;
+    flex-direction: column !important;
     text-align: center;
+    padding: 30px 15px;
+    gap: 20px;
   }
 
-  .aboutus-img, .aboutus-textbox {
-    width: 90%;
+  .aboutus-img,
+  .aboutus-textbox {
+    width: 100%;
   }
 
+  .aboutus-textbox h2 {
+    font-size: 24px;
+  }
+
+  .aboutus-textbox p {
+    font-size: 15px;
+  }
+
+  /* STAFF */
   .aboutus-staff {
     flex-direction: column;
+    gap: 30px;
+    padding: 40px 10px;
+  }
+
+  .aboutus-person {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .aboutus-person-img {
+    height: 260px;
+  }
+
+  .aboutus-person h3 {
+    font-size: 20px;
+  }
+
+  /* FINAL SECTION */
+  .aboutus-final h2 {
+    font-size: 28px;
+  }
+
+  .aboutus-final h3 {
+    font-size: 20px;
+  }
+
+  .aboutus-final p {
+    font-size: 15px;
+  }
+
+  .aboutus-download {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+
+  /* SOCIAL ICONS */
+  .aboutus-social-icons i {
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+}
+
+
+/* ===========================
+        TABLET VERSION
+=========================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .aboutus-wrapper {
+    margin-top: 100px;
+  }
+
+  /* HERO */
+  .aboutus-section h1 {
+    font-size: 40px;
+  }
+
+  .aboutus-sub {
+    font-size: 22px;
+  }
+
+  /* ROWS */
+  .aboutus-row {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 30px;
+    gap: 30px;
+  }
+
+  .aboutus-img,
+  .aboutus-textbox {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .aboutus-textbox h2 {
+    font-size: 30px;
+  }
+
+  /* STAFF */
+  .aboutus-staff {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .aboutus-person {
+    width: 70%;
+  }
+
+  .aboutus-person-img {
+    height: 300px;
+  }
+
+  /* FINAL SECTION */
+  .aboutus-final h2 {
+    font-size: 34px;
+  }
+
+  .aboutus-final h3 {
+    font-size: 22px;
+  }
+
+  .aboutus-final p {
+    font-size: 16px;
+    padding: 0 20px;
   }
 }

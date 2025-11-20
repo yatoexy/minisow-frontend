@@ -1,3 +1,7 @@
+/* ============================
+      SLIDER SECTION (DESKTOP)
+============================ */
+
 .slider-section {
   width: 100%;
   padding: 70px 20px;
@@ -102,4 +106,95 @@
 .social-icon:hover {
   background: rgba(255,255,255,0.35);
   transform: scale(1.1);
+}
+
+
+
+/* ============================
+      MOBILE (0–768px)
+============================ */
+@media (max-width: 768px) {
+
+  .slider-section {
+    flex-direction: column;
+    padding: 40px 15px;
+    gap: 20px;
+  }
+
+  .slider-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .slider-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .slider-text {
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .slider-author {
+    font-size: 16px;
+  }
+
+  /* Arrows smaller */
+  .arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .social-row {
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .social-icon {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+
+
+
+/* ============================
+      TABLET (769–1024px)
+============================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .slider-section {
+    gap: 25px;
+    padding: 60px 20px;
+  }
+
+  .slider-card {
+    width: 85%;
+  }
+
+  .slider-title {
+    font-size: 26px;
+  }
+
+  .slider-text {
+    font-size: 16px;
+  }
+
+  .arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+  }
+
+  .social-row {
+    gap: 14px;
+  }
+
+  .social-icon {
+    font-size: 20px;
+    padding: 11px;
+  }
 }

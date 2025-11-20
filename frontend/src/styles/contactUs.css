@@ -1,3 +1,7 @@
+/* ================================
+        DESKTOP VERSION (UNCHANGED)
+================================ */
+
 /* BACKGROUND WALLPAPER */
 .contact-bg {
   background-image: url("https://storage.123fakturera.se/public/wallpapers/sverige43.jpg");
@@ -71,4 +75,75 @@
 
 .icon:hover {
   transform: scale(1.2);
+}
+
+
+/* ================================
+        MOBILE (≤ 768px)
+================================ */
+
+@media (max-width: 768px) {
+
+  .contact-card {
+    width: 90%;
+    margin: 140px auto 40px;
+    padding: 25px;
+    border-radius: 18px;
+  }
+
+  .contact-title {
+    font-size: 22px;
+  }
+
+  .contact-text {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .contact-email-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  /* Social icons */
+  .contact-socials {
+    gap: 18px;
+    margin: 30px 0;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+}
+
+
+/* ================================
+       TABLET (769px - 1024px)
+================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .contact-card {
+    width: 70%;
+    margin: 150px auto 50px;
+    padding: 32px;
+    border-radius: 22px;
+  }
+
+  .contact-title {
+    font-size: 24px;
+  }
+
+  .contact-text {
+    font-size: 17px;
+  }
+
+  .contact-email-btn {
+    padding: 14px 28px;
+    font-size: 17px;
+  }
+
+  .icon {
+    font-size: 28px;
+  }
 }

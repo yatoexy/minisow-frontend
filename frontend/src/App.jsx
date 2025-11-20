@@ -16,7 +16,7 @@ import Register from "./pages/Register";
 import PriceList from "./pages/PriceList";
 
 import Home from "./pages/Home";
-import Order from "./pages/Order";
+import Order from "./pages/order";
 import OurCustomers from "./pages/OurCustomers";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";

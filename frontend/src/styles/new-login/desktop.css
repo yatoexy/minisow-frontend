@@ -1,4 +1,105 @@
+/* ===============================
+    📱 MOBILE (0px – 768px)
+   =============================== */
+   .login-wrapper {
+  position: relative;
+  z-index: 1;
+}
 
+@media (max-width: 768px) {
+  .login-wrapper {
+    padding: 120px 20px 20px 20px !important;   /* ADDED padding-top fix */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-box {
+    width: 92%;
+    padding: 20px !important;
+    border-radius: 10px;
+  }
+
+  .login-title {
+    font-size: 22px !important;
+    text-align: center;
+  }
+
+  .input-group label {
+    font-size: 14px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .btn-login {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .login-links a {
+    font-size: 14px;
+  }
+}
+
+
+/* ===============================
+    📟 TABLET (769px – 1024px)
+   =============================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .login-wrapper {
+    padding: 140px 40px 40px 40px !important;  /* ADDED padding-top fix */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-box {
+    width: 70%;          /* Slightly bigger than mobile */
+    padding: 30px;       /* Balanced padding */
+    border-radius: 12px;
+  }
+
+  .login-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .input-group label {
+    font-size: 16px;
+  }
+
+  .input-group input {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .btn-login {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+  }
+
+  .login-links {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+}
+
+
+/* ===============================
+    💻 DESKTOP (1025px and above)
+   =============================== */
 
 /* FULL PAGE WALLPAPER */
 .login-wrapper {

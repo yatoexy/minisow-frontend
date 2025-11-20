@@ -1,4 +1,6 @@
-/* ========== SIDEBAR WRAPPER ========== */
+/* ===============================
+      DESKTOP SIDEBAR (DEFAULT)
+=============================== */
 .sidebar {
   width: 250px;
   height: 100vh;
@@ -12,13 +14,15 @@
   flex-direction: column;
   border-right: 1px solid #333;
   overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Hide scrollbar but allow scroll */
+/* Hide scrollbar */
 .sidebar::-webkit-scrollbar {
   width: 0;
 }
 
+/* Title */
 .sidebar-title {
   padding-left: 25px;
   font-size: 22px;
@@ -27,14 +31,13 @@
   color: #cfd3ff;
 }
 
-/* ========== MENU LIST ========== */
+/* Menu */
 .sidebar-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* One menu item */
 .sidebar-item {
   padding: 12px 25px;
   font-size: 17px;
@@ -46,39 +49,57 @@
   transition: 0.2s ease;
 }
 
-/* Hover effect */
 .sidebar-item:hover {
   background: #2a2d3d;
   color: #fff;
 }
 
-/* Active link (Pricelist) */
 .active-link {
   color: #fff;
   font-weight: 600;
   text-decoration: none;
 }
 
-/* Disabled menu items */
 .disabled-link {
   opacity: 0.5;
   cursor: default;
   text-decoration: none;
 }
 
-/* Icons style */
 .menu-icon {
   width: 20px;
   height: 20px;
   opacity: 0.8;
 }
-.sidebar {
-  width: 260px;
-  height: calc(100vh - 70px); /* subtract header height */
-  margin-top: 70px; /* start under header */
+
+/* ===============================
+      MOBILE + TABLET SIDEBAR
+=============================== */
+.sidebar-mobile {
+  transform: translateX(-100%);   /* hidden by default */
+  padding-top: 100px;
+}
+
+/* When "open" class is applied */
+.sidebar-mobile.open {
+  transform: translateX(0);       /* slide in */
+}
+
+/* Hamburger button */
+.sidebar-hamburger {
   position: fixed;
-  left: 0;
-  top: 0;
-  background: #1f1f27;
-  overflow-y: auto;
+  top: 80px;          /* under navbar */
+  left: 20px;
+  font-size: 32px;
+  color: white;
+  z-index: 2002;
+  cursor: pointer;
+}
+
+/* Layout adjustment for small screens */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 230px;
+    background: #1f1f27;
+  }
 }

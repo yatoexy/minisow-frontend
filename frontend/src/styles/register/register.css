@@ -1,4 +1,7 @@
-/* FULL PAGE WRAPPER */
+/* ================================
+        DESKTOP VERSION (UNCHANGED)
+================================ */
+
 .register-wrapper {
   width: 100%;
   min-height: 100vh;
@@ -38,7 +41,7 @@
   font-size: 16px;
 }
 
-/* READONLY INFO TEXT */
+/* TEXTAREA */
 .register-info-text {
   height: 140px;
   border-radius: 12px;
@@ -62,6 +65,8 @@
 .btn-register:hover {
   background: #007a29;
 }
+
+/* ERROR STYLES */
 .input-error {
   border: 2px solid red !important;
 }
@@ -73,3 +78,87 @@
   margin-bottom: 10px;
 }
 
+
+/* ================================
+           MOBILE (≤ 768px)
+================================ */
+
+@media (max-width: 768px) {
+
+  .register-wrapper {
+    padding-top: 140px; /* avoid navbar overlap */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .register-box {
+    width: 100%;
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .register-title {
+    font-size: 22px;
+  }
+
+  .register-box input,
+  .register-box textarea {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 18px;
+  }
+
+  .register-info-text {
+    height: 120px;
+    font-size: 14px;
+  }
+
+  .btn-register {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .error-text {
+    font-size: 12px;
+  }
+}
+
+
+/* ================================
+         TABLET (769px–1024px)
+================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .register-wrapper {
+    padding-top: 160px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .register-box {
+    width: 70%;
+    padding: 32px;
+    border-radius: 20px;
+  }
+
+  .register-title {
+    font-size: 26px;
+  }
+
+  .register-box input,
+  .register-box textarea {
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 20px;
+  }
+
+  .register-info-text {
+    height: 130px;
+  }
+
+  .btn-register {
+    padding: 14px;
+    font-size: 18px;
+  }
+}

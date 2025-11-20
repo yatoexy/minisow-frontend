@@ -1,20 +1,22 @@
 // src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+
 import ForgotEmail from "./pages/forgot/ForgotEmail";
 import ForgotPostal from "./pages/forgot/ForgotPostal";
 import ForgotSuccess from "./pages/forgot/ForgotSuccess";
 import ForgotError from "./pages/forgot/ForgotError";
 
-// LOGIN PAGE
-import LoginPage from "./pages/login/LoginPage";
+// LOGIN PAGE (renamed)
+import LoginPage from "./pages/login/LoginDesktop";
 
 // REGISTER PAGE
 import Register from "./pages/Register";
 
-// PRICELIST PAGE (NEW)
+// PRICELIST PAGE (after login)
 import PriceList from "./pages/PriceList";
 
+// STATIC PAGES
 import Home from "./pages/Home";
 import Order from "./pages/order";
 import OurCustomers from "./pages/OurCustomers";
@@ -31,27 +33,29 @@ export default function App() {
       <Routes>
 
         {/* LOGIN (DEFAULT PAGE) */}
-        <Route
-          path="/"
-          element={<LoginPage setLoggedIn={setLoggedIn} />}
+        <Route 
+          path="/" 
+          element={<LoginPage setLoggedIn={setLoggedIn} />} 
         />
 
         {/* REGISTER PAGE */}
         <Route path="/register" element={<Register />} />
 
-        {/* PRICELIST PAGE (AFTER LOGIN) */}
-        
+        {/* PRICELIST PAGE */}
         <Route
-  path="/pricelist"
-  element={loggedIn ? <PriceList /> : <LoginPage setLoggedIn={setLoggedIn} />}
-/>
+          path="/pricelist"
+          element={
+            loggedIn ? <PriceList /> : <LoginPage setLoggedIn={setLoggedIn} />
+          }
+        />
 
-<Route path="/forgot" element={<ForgotEmail />} />
-<Route path="/forgot-postal" element={<ForgotPostal />} />
-<Route path="/forgot-success" element={<ForgotSuccess />} />
-<Route path="/forgot-error" element={<ForgotError />} />
+        {/* FORGOT PAGES */}
+        <Route path="/forgot" element={<ForgotEmail />} />
+        <Route path="/forgot-postal" element={<ForgotPostal />} />
+        <Route path="/forgot-success" element={<ForgotSuccess />} />
+        <Route path="/forgot-error" element={<ForgotError />} />
 
-        {/* OTHER STATIC PAGES */}
+        {/* STATIC WEBSITE PAGES */}
         <Route path="/home" element={<Home />} />
         <Route path="/order" element={<Order />} />
         <Route path="/customers" element={<OurCustomers />} />
@@ -61,7 +65,6 @@ export default function App() {
         <Route path="/more" element={<More />} />
 
       </Routes>
-      
     </Router>
   );
 }

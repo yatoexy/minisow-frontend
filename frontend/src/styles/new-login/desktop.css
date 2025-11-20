@@ -10,7 +10,11 @@
     background-image: url("https://storage.123fakturera.se/public/wallpapers/sverige43.jpg");
     background-size: cover;
     background-position: center;
-    padding: 120px 20px 20px 20px !important;
+
+    /* ⭐ FIX: push below Navbar */
+    margin-top: 90px;
+
+    padding: 20px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +84,11 @@
     background-image: url("https://storage.123fakturera.se/public/wallpapers/sverige43.jpg");
     background-size: cover;
     background-position: center;
-    padding: 140px 40px 40px 40px !important;
+
+    /* ⭐ FIX: push below Navbar */
+    margin-top: 90px;
+
+    padding: 40px !important;
     display: flex;
     justify-content: center;
     align-items: center;

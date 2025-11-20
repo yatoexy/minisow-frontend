@@ -35,6 +35,7 @@
 .navbar-left {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
 .navbar-logo {
@@ -66,18 +67,22 @@
   top: 10px;
   right: 25px;
   transform: scale(0.85);
-  z-index: 99999;
+  z-index: 999999;
 }
 
 .goog-te-banner-frame { display: none !important; }
 body { top: 0 !important; }
 .goog-te-gadget { font-size: 0 !important; }
+
 .goog-te-combo {
   font-size: 14px !important;
   padding: 6px 10px;
   border-radius: 6px;
   background: white;
+  cursor: pointer;
 }
+
+
 
 /* ---------------------------------
       MOBILE & TABLET NAVBAR
@@ -96,29 +101,42 @@ body { top: 0 !important; }
     color: white;
     cursor: pointer;
     margin-right: 12px;
+    z-index: 1000000;
   }
 
-  /* Logo + burger alignment */
+  /* Logo + hamburger alignment */
   .navbar-left {
     display: flex;
     align-items: center;
     gap: 15px;
   }
 
-  /* MOBILE DROPDOWN MENU */
+  /* LEFT SIDE SLIDE MENU */
   .mobile-menu {
-    position: absolute;
-    top: 85px;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.90);
-    padding: 25px 15px;
 
+    width: 270px;               /* left sidebar width */
+    height: 100vh;
+
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(4px);
+
+    padding: 100px 25px 25px;
     display: flex;
     flex-direction: column;
     gap: 22px;
 
-    z-index: 9000;
+    transform: translateX(-100%); /* hidden initially */
+    transition: transform 0.35s ease;
+
+    z-index: 999998;
+  }
+
+  /* When menuOpen = true */
+  .mobile-menu.open {
+    transform: translateX(0);   /* slide from left */
   }
 
   .mobile-menu a {
@@ -127,7 +145,13 @@ body { top: 0 !important; }
     font-weight: 500;
     text-decoration: none;
   }
+
+  .mobile-lang {
+    margin-top: 20px;
+  }
 }
+
+
 
 /* ---------------------------------
       FORCE DESKTOP BEHAVIOR

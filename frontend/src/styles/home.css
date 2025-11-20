@@ -16,7 +16,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;    /* FIXED BG (as you want) */
   position: fixed;
   top: 0;
   left: 0;
@@ -31,6 +31,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 150px 80px 100px;
+  position: relative;
+  z-index: 2;
 }
 
 /* LEFT SIDE TEXT */
@@ -81,6 +83,8 @@
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
+  position: relative;
+  z-index: 2;
 }
 
 .trial-title {
@@ -148,7 +152,7 @@
   .home-content {
     flex-direction: column;
     text-align: center;
-    padding: 120px 20px 60px;
+    padding: 140px 20px 60px;   /* more padding for fixed bg */
   }
 
   .home-left {

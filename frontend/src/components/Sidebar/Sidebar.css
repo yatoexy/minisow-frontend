@@ -1,20 +1,23 @@
 /* ===============================
-      DESKTOP SIDEBAR (DEFAULT)
+        UNIVERSAL SIDEBAR BASE
 =============================== */
 .sidebar {
   width: 250px;
-  height: 100vh;
+  height: calc(100vh - 85px);
   background: #1d1f2b;
   color: #fff;
   position: fixed;
+  top: 85px;
   left: 0;
-  top: 0;
-  padding-top: 80px;
+  padding-top: 20px;
+
   display: flex;
   flex-direction: column;
   border-right: 1px solid #333;
   overflow-y: auto;
-  transition: transform 0.3s ease-in-out;
+
+  transition: transform 0.35s ease-in-out;
+  z-index: 9999;
 }
 
 /* Hide scrollbar */
@@ -31,11 +34,11 @@
   color: #cfd3ff;
 }
 
-/* Menu */
+/* Menu Items */
 .sidebar-list {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .sidebar-item {
@@ -46,7 +49,7 @@
   gap: 12px;
   cursor: pointer;
   color: #bbb;
-  transition: 0.2s ease;
+  transition: 0.2s ease-in-out;
 }
 
 .sidebar-item:hover {
@@ -57,7 +60,6 @@
 .active-link {
   color: #fff;
   font-weight: 600;
-  text-decoration: none;
 }
 
 .disabled-link {
@@ -66,40 +68,55 @@
   text-decoration: none;
 }
 
-.menu-icon {
-  width: 20px;
-  height: 20px;
-  opacity: 0.8;
-}
-
 /* ===============================
       MOBILE + TABLET SIDEBAR
 =============================== */
-.sidebar-mobile {
-  transform: translateX(-100%);   /* hidden by default */
-  padding-top: 100px;
+
+/* Sidebar hidden by default */
+.sidebar.sidebar-mobile {
+  transform: translateX(-100%);
+  width: 230px;
+  background: #1f1f27;
 }
 
-/* When "open" class is applied */
-.sidebar-mobile.open {
-  transform: translateX(0);       /* slide in */
+/* Sidebar open */
+.sidebar.sidebar-mobile.open {
+  transform: translateX(0);
 }
 
 /* Hamburger button */
 .sidebar-hamburger {
   position: fixed;
-  top: 80px;          /* under navbar */
+  top: 92px;
   left: 20px;
   font-size: 32px;
   color: white;
-  z-index: 2002;
   cursor: pointer;
+  z-index: 20000;
 }
 
-/* Layout adjustment for small screens */
+
+/* ===============================
+      RESPONSIVE BEHAVIOR
+=============================== */
+
+/* MOBILE/TABLET */
 @media (max-width: 1024px) {
+  /* Reduce width slightly */
   .sidebar {
     width: 230px;
-    background: #1f1f27;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+  /* No hamburger icon */
+  .sidebar-hamburger {
+    display: none;
+  }
+
+  /* Sidebar always open */
+  .sidebar {
+    transform: translateX(0);
   }
 }

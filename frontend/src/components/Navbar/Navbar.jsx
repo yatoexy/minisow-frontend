@@ -8,7 +8,6 @@ import { FaBars } from "react-icons/fa";
 export default function Navbar() {
   const { translations } = useContext(LanguageContext);
 
-  // mobile/tablet detection
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -57,9 +56,9 @@ export default function Navbar() {
         )}
       </div>
 
-      {/* MOBILE MENU */}
-      {isMobile && menuOpen && (
-        <div className="mobile-menu">
+      {/* MOBILE LEFT-SIDE MENU */}
+      {isMobile && (
+        <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
           <Link to="/home" onClick={() => setMenuOpen(false)}>{translations.home}</Link>
           <Link to="/order" onClick={() => setMenuOpen(false)}>{translations.order}</Link>
           <Link to="/customers" onClick={() => setMenuOpen(false)}>{translations.customers}</Link>
